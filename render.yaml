@@ -1,0 +1,22 @@
+# Render.com Blueprint. Disk permanen butuh paket berbayar (Starter). Tanpa disk, data HILANG tiap deploy/restart.
+services:
+  - type: web
+    name: jagojek
+    runtime: node
+    plan: starter
+    buildCommand: "echo no build"
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: DATA_DIR
+        value: /var/data
+      - key: TRUST_PROXY
+        value: "1"
+      - key: SIGNUP_BONUS
+        value: "100000"
+    disk:
+      name: jagojek-data
+      mountPath: /var/data
+      sizeGB: 1

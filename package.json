@@ -1,0 +1,16 @@
+{
+  "name": "jagojek-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Jagojek - super-app (mode demo): web + server akun & dompet. Tanpa dependensi npm.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test",
+    "qr": "node scripts/qr.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {}
+}
